@@ -1,0 +1,23 @@
+﻿<view title="vm.employee.firstName + ' ' + vm.employee.lastName">
+    <content has-header="true" padding="true">
+
+        <div class="details">
+            <img ng-src="pics/{{vm.employee.pic }}" width="100" height="100" />
+            <h4>{{ vm.employee.firstName }} {{ vm.employee.lastName }}</h4>
+            <p>
+                {{ vm.employee.title }}<br />
+                {{ vm.employee.city }}
+            </p>
+        </div>
+
+        <div class="list card">
+            <a class="item item-icon-left" href="#/employee/{{vm.employee.managerId}}" ng-if="vm.employee.managerId > 0"><i class="icon ion-ios7-person"></i>View Manager<p>{{vm.employee.managerName}}</p></a>
+            <a class="item item-icon-left" href="#/employee/{{vm.employee.id}}/reports" ng-if="vm.employee.reports > 0"><i class="icon ion-person-stalker"></i>View Direct Reports<p>{{vm.employee.reports}}</p></a>
+            <a class="item item-icon-left" href="tel:{{vm.employee.officePhone}}"><i class="icon ion-ios7-telephone"></i>Call Office<p>{{vm.employee.officePhone}}</p></a>
+            <a class="item item-icon-left" href="tel:{{vm.employee.cellPhone}}"><i class="icon ion-ios7-telephone"></i>Call Cell<p>{{vm.employee.cellPhone}}</p></a>
+            <a class="item item-icon-left" href="sms:{{vm.employee.cellPhone}}"><i class="icon ion-chatbox-working"></i>SMS<p>{{vm.employee.cellPhone}}</p></a>
+            <a class="item item-icon-left" href="mailto:{{vm.employee.email}}"><i class="icon ion-ios7-email"></i>Email<p>{{vm.employee.email}}</p></a>
+        </div>
+
+    </content>
+</view>
