@@ -1,0 +1,5 @@
+﻿define([
+    './EmployeeDetailController'
+], function () {
+
+});
